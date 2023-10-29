@@ -1,0 +1,61 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.example.CreateConfig</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>CreateConfig</name>
+
+    <vendor email="vlad-1-9-9-6@mail.ru">Kazarin Vladislav</vendor>
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description>
+        <![CDATA[
+        <p>"CreateConfig" is a plugin that allows you to easily create and install configuration files in your project.</p>
+
+        <p><strong>Key features:</strong></p>
+        <ul>
+            <li>Create and install configuration files in your project.</li>
+            <li>Support for customizable settings.</li>
+        </ul>
+
+        <p><strong>Usage:</strong></p>
+        <ol>
+            <li>Open your project.</li>
+            <li>Click "Create Config" from the toolbar.</li>
+            <li>Select the file in which you want to install the configuration.</li>
+            <li>In the popup menu, select one of the available configuration files.</li>
+        </ol>
+
+        <p><strong>Set configuration:</strong></p>
+        <ol>
+            <li>Open your project.</li>
+            <li>Click "Create Config" from the toolbar.</li>
+            <li>Select "Settings" in the popup menu.</li>
+            <li>Select customization options.</li>
+            <li>Click "OK" to install the configuration.</li>
+        </ol>
+
+        <p>The "CreateConfig" plugin simplifies the process of creating and installing configuration files in projects, enhancing development productivity and providing greater flexibility in project setup.</p>
+        ]]>
+    </description>
+
+
+    <!-- Minimum version of IntelliJ Platform -->
+    <idea-version since-build="210.0"/>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <actions>
+        <action id="ReloadModules" class="actions.ReloadModulesAction" text="Reload Modules" icon="icons/config_icon.svg">
+            <add-to-group group-id="NavBarToolBar" anchor="first"></add-to-group>
+        </action>
+    </actions>
+</idea-plugin>
