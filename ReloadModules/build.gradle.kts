@@ -10,9 +10,6 @@ version = "3.4.1"
 repositories {
     mavenCentral()
 }
-dependencies {
-    implementation("com.intellij:forms_rt:7.0.3")
-}
 
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
@@ -21,7 +18,6 @@ intellij {
     type.set("PC") // Target IDE Platform
     plugins.set(listOf(/* Plugin Dependencies */))
 }
-
 tasks {
     // Set the JVM compatibility versions
     withType<JavaCompile> {
